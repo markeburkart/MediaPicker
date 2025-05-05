@@ -51,6 +51,7 @@ struct AlbumView: View {
                     LiveCameraCell {
                         showingCamera = true
                     }
+                    .frame(width: 180, height: 180)
                 }
                 
                 if viewModel.isLoading, viewModel.assetMediaModels.isEmpty {
