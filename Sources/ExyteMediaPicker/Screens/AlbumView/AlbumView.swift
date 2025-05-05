@@ -47,7 +47,7 @@ struct AlbumView: View {
                     PermissionActionView(type: .camera(permissionsService.cameraPermissionStatus))
                 }
 
-                if permissionService.cameraPermissionStatus == .authorized {
+                if permissionsService.cameraPermissionStatus == .authorized {
                     LiveCameraCell {
                         showingCamera = true
                     }
