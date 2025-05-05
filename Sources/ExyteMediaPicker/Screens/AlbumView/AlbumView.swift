@@ -47,6 +47,12 @@ struct AlbumView: View {
                     PermissionActionView(type: .camera(permissionsService.cameraPermissionStatus))
                 }
 
+                if permissionService.cameraPermissionStatus == .authorized {
+                    LiveCameraCell {
+                        showingCamera = true
+                    }
+                }
+                
                 if viewModel.isLoading, viewModel.assetMediaModels.isEmpty {
                     ProgressView()
                         .padding()
